@@ -10,7 +10,7 @@ class Queue:
         # self.storage = ?
 
     def enqueue(self, value):
-        pass
+
 
     def dequeue(self):
         pass
