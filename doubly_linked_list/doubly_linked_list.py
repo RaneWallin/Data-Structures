@@ -101,9 +101,11 @@ class DoublyLinkedList:
           self.tail = None
         else:
           self.tail.prev.next = None
+          self.tail = self.tail.prev
 
-        self.length = self.length - 1
-        return removedNode.value
+        if self.length > 0:
+            self.length = self.length - 1
+        return removedNode.value if removedNode else None
 
     """Removes the input node from its current spot in the 
     List and inserts it as the new head node of the List."""
